@@ -19,21 +19,21 @@ function ListarProdutos(props) {
 
     function handleComprar(event, produto){
         event.preventDefault();
-        //adicionar o produto no carrinho
         props.adicionarProduto(produto);
-        //exibir mensagem ao carrinho
         props.exibirMensagem(produto);
     }
 
     function render() {
 
         let key = 1;
-        const cards = produtos.map(produto => 
+        const cards = produtos.map(produto =>
             <Card 
                 key={key}
                 data-testid={'card' + key++}
-                style={{ width: '18rem', margin: '10px', float: 'left' }}>
+                style={{ width: '18rem', margin: '20px', float: 'left' }}>
+                
                 <Card.Img variant="top" src={placeholder} />
+                
                 <Card.Body className="text-center">
                     <Card.Title style={{ height: '40px' }}>
                         { produto.nome }
@@ -48,6 +48,7 @@ function ListarProdutos(props) {
                         Comprar ({produto.preco})   
                     </Button>
                 </Card.Body>
+
             </Card>
         );
 

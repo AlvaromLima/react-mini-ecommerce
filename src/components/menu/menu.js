@@ -22,9 +22,12 @@ function Menu(props) {
     }
 
     return (
+
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="">Mini Ecommerce</Navbar.Brand>
+            
             <Navbar.Collapse className="justify-content-end">
+                
                 <Nav>
                     <NavDropdown
                         title={
@@ -35,15 +38,18 @@ function Menu(props) {
                             </div>
                         }
                         drop="left">
+                        
                         <NavDropdown.Item href=""
                             onClick={props.handleExibirProdutos}>
                             <FontAwesomeIcon icon={faShoppingBasket} />
                             &nbsp;
                             <strong>Produtos</strong>
                         </NavDropdown.Item>
+                        
                         <NavDropdown.Divider />
                         <ItensCarrinhoMenu produtos={props.produtos} />
                         <NavDropdown.Divider />
+                        
                         <NavDropdown.Item href="" data-testid="total-carrinho">
                             Total: R$ {calcularTotal()}    
                         </NavDropdown.Item>
@@ -59,8 +65,11 @@ function Menu(props) {
                             </NavDropdown.Item>
                         </span>
                     </NavDropdown>
+
                 </Nav>
+
             </Navbar.Collapse>
+        
         </Navbar>
     );
 

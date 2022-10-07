@@ -44,6 +44,10 @@ function MiniEcommerce() {
     setTotal(total);
   }
 
+  function handleLimparCarrinho() {
+    setCarrinho({ produtos: [] })
+  }
+
   return (
     <div>
       <Menu 
@@ -53,7 +57,12 @@ function MiniEcommerce() {
       <Produtos
         visivel={exibirProdutos}
         adicionarProduto={adicionarProduto} />
-      <Checkout />
+      <Checkout 
+        visivel={exibirCheckout}
+        handleExibirProdutos={handleExibirProdutos}
+        total={total}
+        produtos={carrinho}
+        handleLimparCarrinho={handleLimparCarrinho} />
     </div>
   );
   

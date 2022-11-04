@@ -12,5 +12,5 @@ describe('Teste do componente de listagem de cidades.', () => {
         expect( await findByTestId('São Paulo') ).toHaveTextContent('São Paulo');
         expect( await findByTestId('São Pedro') ).toHaveTextContent('São Pedro');
     });
-
+    
 });
